@@ -902,6 +902,7 @@ start navbar section
 
 header {
   height: 5.5rem;
+  margin-bottom: .5rem;
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
 }
 .username {
@@ -923,6 +924,13 @@ start sidebar section
   font-weight: 700;
   line-height: normal;
 }
+aside {
+  transform: translateX(-9999rem);
+  transition: .5s;
+}
+aside.active {
+  transform: translateX(0);
+}
 .sidebar-link  {
   color: #000;
 font-size: 0.75rem;
@@ -934,6 +942,14 @@ line-height: normal;
   height: 0.09375rem;
   background-color: #2C712C;
 }
+.sidebar-link i {
+  font-size: 1.5625rem;
+  color: #9C9C9C;
+}
+.sidebar-link.active i {
+  box-shadow: 0px 4px 41.8px 0px #5CD65C inset;
+  color: #5CD65C;
+}
 
 .sidebar-sprater {
   color: #000;
@@ -941,7 +957,7 @@ line-height: normal;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
-  max-width: 15ch;
+  width: 9rem;
 }
 
 .logout-link {
@@ -950,7 +966,6 @@ font-size: 1.125rem;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
-margin-top: 2.75rem;
 }
 
 /* 
@@ -958,10 +973,6 @@ margin-top: 2.75rem;
 start home section
 --------------------------------------------- 
 */
-
-.home-page {
-  padding-top: 3.62rem;
-}
 
 .home-page .left-content {
   border-radius: 1.25rem;
@@ -1163,8 +1174,8 @@ top: 0;
 left: 0;
 }
 .user-dmand .dots span {
-  width: 1rem;
-  height: 1rem;
+  width:clamp(.5rem ,4vw ,1rem ) ;
+  height:clamp(.5rem ,4vw ,1rem ) ;
   background-color: #D9D9D9;
   border-radius: 50%;
 }
@@ -1347,6 +1358,169 @@ right: 9rem;
   transform: rotate(32.653deg);
   right: 13rem;
 }
+
+/* start post page section  */
+.user-post-info {
+padding:  2.75rem;
+
+}
+.user-post-info .user-post-img {
+max-width: 91em;
+border-radius: 91em;
+background: url(<path-to-image>), lightgray 50% / cover no-repeat, #D9D9D9;
+}
+.user-post-info .user-post-name {
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.user-post-info .user-post-button {
+  height: 2.875rem;
+  display: grid;
+  place-items: center;
+  border-radius: 0.625rem;
+  background: #5CD65C;
+  color: #FFF;
+  font-size: 0.75rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+width:10.625rem;
+}
+.user-post-info .évaluations {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.user-post-info .évaluations-subtitel {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top:.44rem;
+}
+.verification- {
+  border-radius: 1.25rem;
+border: 1px solid #D1D1D1;
+background: #FFF;
+box-shadow: 0px 0px 33.5px 0px rgba(0, 0, 0, 0.10);
+}
+.verification-link {
+font-size: 0.9375rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-decoration-line: underline;
+}
+.Présentation-box .titel {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.Présentation-box .discrption {
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  
+}
+.Répond-small-link {
+  color: #002081;
+font-size: 0.5rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+position: relative;
+}
+.Répond-small-link::before {
+  content: '';
+  position: absolute;
+  width: .3rem;
+  height: .3rem;
+  border-radius: 50%;
+  background-color:#002081 ;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -.7rem;
+}
+.rate-titel {
+  color: #000;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.rate-persant {
+  font-size: 0.6875rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.user-info .user-name {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.user-info .user-name .post-from  {
+  color: #9C9C9C;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.client-say {
+  font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    max-width: 43ch;
+    line-height: normal;
+    margin-inline: auto;
+}
+.flag-link {
+font-size: 1rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-decoration-line: underline;
+}
+/* end post page section  */
+
+/* start bootom tab  */
+.bootom-tab {
+  min-height: 10.5rem;
+  border-radius: 5rem 5rem 0rem 0rem;
+  background: #FFF;
+  box-shadow: 0px -4px 33.5px 0px rgba(0, 0, 0, 0.15);
+}
+.bootom-tab .tab-button {
+  width: 13.875rem;
+height: 3.5rem;
+border-radius: 1.25rem;
+background: #5CD65C;
+color: #FFF;
+text-align: center;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.bootom-tab .tab-meduim-text {
+font-size: 1.125rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.user-imges-container img {
+  margin-left: -1rem;
+  user-select: none;
+}
+/* end bootom tab  */
+
+
 
 
 
