@@ -3,6 +3,12 @@
         margin-right: auto;
     }
 }
+@media screen and (min-width:576px)  {
+    .res-sm-two-col {
+        grid-template-columns: repeat(2 , 1fr);
+    }
+
+}
 @media screen and (max-width:380px) {
 
 }
